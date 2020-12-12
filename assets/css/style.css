@@ -21,9 +21,19 @@ a
 body
 {
     margin: 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     color: #000000;
     font-family: 'Open Sans';
+}
+
+section
+{
+    margin-top: 70px;
+}
+
+section:first-of-type
+{
+    margin: 0;
 }
 
 .container
@@ -32,6 +42,13 @@ body
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 15px;
+}
+
+.container::before, .container::after{
+    content: ' ';
+    display: table;
+    position: absolute;
 }
 
 .navbar
@@ -265,4 +282,127 @@ body
 .nav-dots-wrapper .owl-dot.active, .nav-dots-wrapper .owl-dot:hover
 {
     background-color: #ffffff;
+}
+
+.title
+{
+    font-family: 'Akrobat';
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.simple-list
+{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.our-pluses
+{
+    position: relative;
+    padding-left: 25px;
+}
+
+.our-pluses:after
+{
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+}
+
+.our-pluses .title
+{
+    margin-top: 0;
+}
+
+.refrigerator-package
+{
+    height: 990px;
+    background: url(../images/bg/van.png) center center no-repeat;
+}
+
+.refrigerator-package .container
+{
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.package-item
+{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+}
+
+.package-item .item-text
+{
+    width: 320px;
+}
+
+.package-item .item-title
+{
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.package-item p
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.remote-controller img
+{
+    margin-right: 100px;
+}
+
+.remote-controller .item-text
+{
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.remote-controller
+{
+    right: 0;
+    top: 150px;
+}
+
+.stand
+{
+    flex-direction: row;
+    left: 50%;
+    bottom: 40px;
+    align-items: center;
+}
+
+.stand img
+{
+    margin-right: 50px;
+}
+
+.controller
+{
+    bottom: 35px;
+}
+
+.controller .item-text
+{
+    margin-left: auto;
+    margin-top: -25px;
+}
+
+.controller img
+{
+    margin-right: 200px;
 }
