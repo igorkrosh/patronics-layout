@@ -1,0 +1,137 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+input:focus, button, select:focus
+{
+    outline: none;
+}
+
+a, button
+{
+    cursor: pointer;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+body
+{
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #000000;
+    font-family: 'Open Sans';
+}
+
+.container
+{
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar
+{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul
+{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li
+{
+    margin-right: 15px;
+}
+
+.menu ul li:last-child
+{
+    margin-right: 0;
+}
+
+.menu ul a
+{
+    font-size: 13px;
+}
+
+.contacts-wrapper
+{
+    display: flex;
+}
+
+.contacts-wrapper .contact
+{
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 20px;
+    margin-left: 15px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbar .contacts-wrapper .contact:first-child
+{
+    margin-left: 0;
+}
+
+.contacts-wrapper .contact:after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.contacts-wrapper .contact:hover
+{
+    transform: scale(1.1);
+}
+
+.contacts-wrapper .contact.phone:after
+{
+    width: 10px;
+    height: 17px;
+    top: 1px;
+    background-image: url(../images/icons/phone.png);
+}
+
+.contacts-wrapper .contact.mail
+{
+    padding-left: 25px;
+}
+
+.contacts-wrapper .contact.mail:after
+{
+    width: 17px;
+    height: 12px;
+    top: 4px;
+    background-image: url(../images/icons/mail.png);
+}
+
+.btn-black
+{
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.btn-black:hover
+{
+    transform: scale(1.1);
+}
