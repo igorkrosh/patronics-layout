@@ -48,7 +48,6 @@ section:first-of-type
 .container::before, .container::after{
     content: ' ';
     display: table;
-    position: absolute;
 }
 
 .navbar
@@ -228,6 +227,16 @@ section:first-of-type
     transition: 0.5s;
 }
 
+.main-slider .owl-prev
+{
+    margin-right: auto;
+}
+
+.main-slider .owl-next
+{
+    margin-left: auto;
+}
+
 .main-slider .owl-prev:hover, .main-slider .owl-next:hover
 {
     transform: scale(1.1);
@@ -405,4 +414,117 @@ section:first-of-type
 .controller img
 {
     margin-right: 200px;
+}
+
+.panel-interface
+{
+    background: url(../images/bg/panel-interface.jpg) no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-interface .title
+{
+    margin-top: 95px;
+    text-align: center;
+}
+
+.btn-interface
+{
+    border: none;
+    background: none;
+    font-family: 'Akrobat';
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    display: block;
+}
+
+.btn-interface:hover
+{
+    transform: scale(1.1);
+}
+
+.btn-interface-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+}
+
+.white-line
+{
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: -2px;
+    transition: 0.5s;
+
+}
+
+.interface-viewer.container
+{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interface-viewer .interface
+{
+    position: relative;
+    z-index: 10;
+}
+
+.interface [interface]
+{
+    position: absolute;
+    left: 117px;
+    top: 72px;
+    z-index: -1;
+    display: none;
+}
+
+.interface [interface].active
+{
+    display: block;
+    opacity: 0;
+}
+
+.interface:after
+{
+    content: "";
+    width: 123px;
+    height: 68px;
+    background-color: #000000;
+    position: absolute;
+    left: 117px;
+    top: 72px;
+    z-index: -5;
+}
+
+.interface-text
+{
+    text-align: right;
+    font-size: 18px;
+    display: none;
+}
+
+.interface-text.active
+{
+    display: block;
+    opacity: 0;
+}
+
+.interface-text p
+{
+    margin-bottom: 0;
+    margin-top: 0;
 }
