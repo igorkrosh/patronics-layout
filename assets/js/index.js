@@ -1,10 +1,10 @@
+let switchInterfaceBlock = false;
+
 $(document).ready(Core);
 
 function Core()
 {
-    
-    SetMainSlider();
-    
+    SetMainSlider();    
     SetInterfaceSection();
 }
 
@@ -23,18 +23,14 @@ function SetMainSlider()
 
 function SetInterfaceSection()
 {
-    
-    SetWhiteLinePosition($('.btn-interface')[0]);
-    SetPanelInterface('cooling');
-
     $('.btn-interface').on('click', function() {
-        SetWhiteLinePosition(this);
-        SetPanelInterface($(this).attr('interface'));
-    })
+        SwitchIntefrace($(this).attr('interface'))
+    });
 }
 
-function SetWhiteLinePosition(btn)
+function SetWhiteLinePosition(interfaceName)
 {
+    let btn = $(`button[interface="${interfaceName}"]`)[0]
     let lineWidth = $(btn).outerWidth() * 0.8;
     let left = btn.offsetLeft + ($(btn).outerWidth() - lineWidth) / 2
 
@@ -48,24 +44,50 @@ function SetPanelInterface(interfaceName)
 {
     $('.interface [interface].active').animate({
         opacity: 0
-    }, 500, function() {
+    }, 250, function() {
+        if (!$(this).hasClass('active'))
+        {
+            return;
+        }
         $(this).removeClass('active');
+        $(`.interface [interface="${interfaceName}"]`).addClass('active');
+        $(`.interface [interface="${interfaceName}"]`).animate({
+            opacity: 1
+        }, 250, function () {
+            switchInterfaceBlock = false;
+        });
     })
 
     $(`.interface-text.active`).animate({
         opacity: 0
-    }, 500, function() {
+    }, 250, function() {
+        if (!$(this).hasClass('active'))
+        {
+            return;
+        }
         $(this).removeClass('active');
         $(`.interface-text[interface="${interfaceName}"]`).addClass('active');
         $(`.interface-text[interface="${interfaceName}"]`).animate({
             opacity: 1
-        }, 500);
-    })
-
-    $(`.interface [interface="${interfaceName}"]`).addClass('active');
-    $(`.interface [interface="${interfaceName}"]`).animate({
-        opacity: 1
-    }, 500);
-
-    
+        }, 250);
+    });
 }
+
+
+
+function SwitchIntefrace(interfaceName)
+{
+    if (!switchInterfaceBlock)
+    {
+        SetWhiteLinePosition(interfaceName);
+        SetPanelInterface(interfaceName);
+
+        switchInterfaceBlock = !switchInterfaceBlock;
+    }
+
+}
+
+$(window).on('load', function()
+{
+    SwitchIntefrace('cooling');
+})

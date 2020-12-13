@@ -461,7 +461,6 @@ section:first-of-type
 .white-line
 {
     position: absolute;
-    width: 100px;
     height: 2px;
     background-color: #ffffff;
     bottom: -2px;
