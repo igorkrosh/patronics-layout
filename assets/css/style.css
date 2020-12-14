@@ -299,6 +299,7 @@ section:first-of-type
     font-size: 36px;
     font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .simple-list
@@ -328,6 +329,7 @@ section:first-of-type
 .our-pluses .title
 {
     margin-top: 0;
+    text-align: left;
 }
 
 .refrigerator-package
@@ -526,4 +528,28 @@ section:first-of-type
 {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.our-pluses-sect .pluses-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.our-pluses-sect .plus-item
+{
+    width: 220px;
+}
+
+.our-pluses-sect .plus-icon
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.our-pluses-sect .plus-text
+{
+    text-align: center;
+    display: block;
 }
