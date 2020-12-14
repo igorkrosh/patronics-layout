@@ -83,7 +83,7 @@ section:last-of-type
 
 .menu ul a
 {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .contacts-wrapper
@@ -708,4 +708,92 @@ section:last-of-type
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+footer
+{
+    background-color: #f8f8f8;
+    padding: 40px 0;
+}
+
+footer .contacts-wrapper
+{
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+footer .contacts-wrapper .contact
+{
+    margin-bottom: 15px;
+}
+
+footer .contacts-wrapper .contact:last-child
+{
+    margin-bottom: 0;
+}
+
+footer .footer-col
+{
+    margin-top: 20px;
+}
+
+footer .footer-col:first-child
+{
+    margin-top: 0;
+}
+
+footer .menu ul
+{
+    display: block;
+    font-size: 10px;
+}
+
+footer .menu ul a
+{
+    font-size: 12px;
+}
+
+footer .container
+{
+    display: flex;
+    justify-content: space-around
+}
+
+footer .menu li
+{
+    margin-bottom: 10px;
+}
+
+footer .info
+{
+    font-size: 12px;
+    max-width: 310px;
+    display: block;
+    color: #959595;
+}
+
+footer .copyright
+{
+    font-size: 12px;
+    display: block;
+    max-width: 280px;
+}
+
+footer .policy
+{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+footer .salut
+{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+footer .salut a 
+{
+    font-weight: 700;
 }
