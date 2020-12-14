@@ -36,6 +36,11 @@ section:first-of-type
     margin: 0;
 }
 
+section:last-of-type
+{
+    margin-bottom: 70px;
+}
+
 .container
 {
     max-width: 1200px;
@@ -552,4 +557,155 @@ section:first-of-type
 {
     text-align: center;
     display: block;
+}
+
+.contact-form-wrapper
+{
+    width: 550px;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    padding: 45px 25px 35px 25px;
+}
+
+.contact-form-wrapper .title
+{
+    margin: 0;
+}
+
+.contact-form-wrapper .subtitle
+{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.contact-form-wrapper .input-form
+{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: auto;
+}
+
+.contact-form-wrapper b
+{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-form-wrapper .input-form label
+{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.contact-form-wrapper .input-form input
+{
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.contact-form-wrapper .input-form input:focus
+{
+    background-color: #f0f0f0;
+    border: 1px solid #b3b3b3;
+}
+
+.contact-form-wrapper .btn-black
+{
+    width: 180px;
+}
+
+.contact-form-wrapper .btn-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.contact-form-wrapper .policy
+{
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #747474;
+}
+
+.search-form input
+{
+    width: 100%;
+    padding: 15px 15px 15px 60px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f7f7f7;
+    transition: 0.5s;
+}
+
+.search-form input:focus
+{
+    background-color: #e0dfdf;
+}
+
+.search-form
+{
+    width: 450px;
+    position: relative;
+}
+
+.search-form:after
+{
+    content: "";
+    width: 22px;
+    height: 23px;
+    background: url(../images/icons/search.png);
+    top: 12px;
+    left: 30px;
+    position: absolute;
+}
+
+.search-example
+{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.search-example span
+{
+    color: #676767;
+}
+
+.search-example button
+{
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    display: inline-block;
+    font-family: 'Open Sans';
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.contact-us .container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-form-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
