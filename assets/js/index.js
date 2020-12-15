@@ -2,10 +2,16 @@ let switchInterfaceBlock = false;
 
 $(document).ready(Core);
 
+$(window).on('load', function()
+{
+    SwitchIntefrace('cooling');
+})
+
 function Core()
 {
     SetMainSlider();    
     SetInterfaceSection();
+    SetForms();
 }
 
 function SetMainSlider()
@@ -73,8 +79,6 @@ function SetPanelInterface(interfaceName)
     });
 }
 
-
-
 function SwitchIntefrace(interfaceName)
 {
     if (!switchInterfaceBlock)
@@ -87,7 +91,76 @@ function SwitchIntefrace(interfaceName)
 
 }
 
-$(window).on('load', function()
+function SetForms()
 {
-    SwitchIntefrace('cooling');
-})
+    $.validator.addMethod('validateForm', ValidateForm);
+    
+    let validateSetting = {
+        rules: {
+            phone: {
+                validateForm: true
+            },
+            mail: {
+                validateForm: true
+            }
+        },
+        messages: {
+            phone: {
+                validateForm: 'Введите полный номер телефона'
+            },
+            mail: {
+                validateForm: 'Введите ваш электронный адрес'
+            }
+        },
+        submitHandler: SubmitForm
+    } 
+    
+    $('.contact-us .contact-form').validate(validateSetting);
+    $('form input[name=phone]').mask("+7(999)999-9999", {autoclear: false});
+}
+
+function SubmitForm()
+{
+    console.log('submit');
+    
+}
+
+function ValidateForm(value, element)
+{
+    let inputName = $(element).attr('name');
+    let phoneCheck = false;
+    let mailCheck = false;
+    let secondInputValue;
+
+    switch(inputName)
+    {
+        case 'phone':
+            secondInputValue = $(element).closest('form').find('input[name="mail"]').val();
+            
+            phoneCheck = CheckPhone(value);
+            mailCheck = CheckEmail(secondInputValue);
+
+            break;
+        case 'mail':
+            secondInputValue = $(element).closest('form').find('input[name="phone"]').val();
+
+            phoneCheck = CheckPhone(secondInputValue);
+            mailCheck = CheckEmail(value);
+
+            break;
+    }
+
+    return phoneCheck || mailCheck;
+}
+
+function CheckEmail(value) 
+{
+    let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(value).toLowerCase());
+}
+
+function CheckPhone(value)
+{
+    let re = /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g;
+    return re.test(String(value)); 
+}

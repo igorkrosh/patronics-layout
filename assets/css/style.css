@@ -840,3 +840,6 @@ footer .salut a
     font-weight: 700;
 }
 
+.contact-form-wrapper .input-form input.error {
+    border-color: #dc3545;
+}
