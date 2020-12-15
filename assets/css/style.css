@@ -204,6 +204,11 @@ section:last-of-type
     align-items: center;
 }
 
+.main-slider .slider-item .btn-black
+{
+    min-width: 170px;
+}
+
 .bg-image
 {
     position: absolute;
@@ -220,6 +225,7 @@ section:last-of-type
     text-transform: uppercase;
     font-weight: 800;
     color: #434343;
+    margin-bottom: 0;
 }
 
 .main-slider .slider-title b
@@ -235,6 +241,8 @@ section:last-of-type
 {
     color: #434343;
     font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .main-slider .slider-wrapper .container
@@ -368,12 +376,13 @@ section:last-of-type
 {
     margin-top: 0;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .refrigerator-package
 {
     height: 990px;
-    background: url(../images/bg/van.png) center center no-repeat;
+    background: url(../images/bg/van.png) 48% center no-repeat;
 }
 
 .refrigerator-package .container
