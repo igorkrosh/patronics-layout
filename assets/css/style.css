@@ -67,7 +67,7 @@ section:last-of-type
     top: 0;
     width: 100%;
     background-color: #ffffff;
-    z-index: 15;
+    z-index: 20;
 }
 
 .menu ul
