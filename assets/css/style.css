@@ -144,7 +144,7 @@ section:last-of-type
     justify-content: space-between;
 }
 
-.contacts-wrapper .contact:after
+.contacts-wrapper .contact a:after
 {
     content: "";
     position: absolute;
@@ -156,7 +156,7 @@ section:last-of-type
     transform: scale(1.1);
 }
 
-.contacts-wrapper .contact.phone:after
+.contacts-wrapper .contact.phone a:after
 {
     width: 10px;
     height: 17px;
@@ -169,7 +169,7 @@ section:last-of-type
     padding-left: 25px;
 }
 
-.contacts-wrapper .contact.mail:after
+.contacts-wrapper .contact.mail a:after
 {
     width: 17px;
     height: 12px;

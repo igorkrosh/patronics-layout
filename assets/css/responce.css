@@ -1,0 +1,94 @@
+@media(max-width: 1200px)
+{
+    .container
+    {
+        max-width: 960px;
+    }
+    
+    header .contacts-wrapper .contact a
+    {
+        font-size: 0px;
+        width: 29px;
+        height: 29px;
+        display: block;
+        position: relative;
+        border-radius: 50%;
+        border: 1px solid #000000;
+    }
+
+    header .contacts-wrapper .contact.phone a:after
+    {
+        top: 5px;
+        left: 8px;
+    }
+
+    header .contacts-wrapper .contact.mail a:after
+    {
+        top: 8px;
+        left: 5px;
+    }
+
+    header .contacts-wrapper .contact
+    {
+        margin: 0;
+    }
+
+    header .contacts-wrapper .contact.phone
+    {
+        padding-left: 0;
+    }
+    header .contacts-wrapper .contact.mail
+    {
+        padding-left: 15px;
+    }
+
+    header .contacts-wrapper
+    {
+        margin: 0 10px;
+    }
+
+    .menu ul li
+    {
+        margin-right: 10px;
+    }
+
+    .remote-controller
+    {
+        flex-direction: row;
+    }
+
+    .remote-controller img
+    {
+        margin-right: 25px;
+        height: 150px;
+        top: 160px;
+    }
+
+    .stand img
+    {
+        height: 200px;
+        margin-right: 25px;
+    }
+
+    .controller img
+    {
+        margin-right: 25px;
+        margin-bottom: 25px;
+        height: 200px;
+    }
+
+    .search-form
+    {
+        width: 400px;
+    }
+
+    .contact-form-wrapper
+    {
+        width: 450px;
+    }
+
+    footer .copyright
+    {
+        max-width: 240px;
+    }
+}
