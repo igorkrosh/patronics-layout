@@ -12,6 +12,7 @@ function Core()
     SetMainSlider();    
     SetInterfaceSection();
     SetForms();
+    SetModal();
 }
 
 function SetMainSlider()
@@ -122,7 +123,6 @@ function SetForms()
 function SubmitForm()
 {
     console.log('submit');
-    
 }
 
 function ValidateForm(value, element)
@@ -163,4 +163,57 @@ function CheckPhone(value)
 {
     let re = /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g;
     return re.test(String(value)); 
+}
+
+function SetModal()
+{
+    $('.btn-modal').on('click', function()
+    {
+        ShowModal('#modalContactForm');
+    });
+
+    $('.modal-dialog').on('click', function(e) {
+        e.stopPropagation();
+    });
+
+    $('.modal').on('click', function() {
+        HideModal(`#${$(this).attr('id')}`);
+    });
+
+    $('.btn-modal-close').on('click', function ()
+    {
+        let modalId = $(this).closest('.modal').attr('id');
+        console.log(modalId)
+        HideModal(`#${modalId}`);
+    });
+}
+
+function ShowModal(modalId)
+{
+    $(modalId + ' .modal-dialog').off('animationend');
+    $(modalId).addClass('active');
+    $('body').addClass('modal-open');
+    $(modalId + ' .modal-dialog').addClass('fadeInDownBig')
+    
+    $('body').append('<div class="modal-backdrop"></div>');
+    setTimeout(function() {
+        $('.modal-backdrop').addClass('active');
+    }, 50)
+}
+
+function HideModal(modalId)
+{
+    $(modalId + ' .modal-dialog').removeClass('fadeInDownBig');
+    $(modalId + ' .modal-dialog').addClass('fadeOutDownBig');
+    $('.modal-backdrop').removeClass('active');
+    $('body').removeClass('modal-open');
+    $(modalId + ' .modal-dialog').on('animationend', function() {
+        if (!$(modalId).hasClass('active'))
+        {
+            return;
+        }
+        $(modalId).removeClass('active');
+        $(modalId + ' .modal-dialog').removeClass('fadeOutDownBig');
+        $('.modal-backdrop').remove();
+    });
 }

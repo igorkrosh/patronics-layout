@@ -42,6 +42,11 @@ section:last-of-type
     margin-bottom: 70px;
 }
 
+.modal-open
+{
+    overflow: hidden;
+}
+
 .container
 {
     max-width: 1200px;
@@ -842,4 +847,135 @@ footer .salut a
 
 .contact-form-wrapper .input-form input.error {
     border-color: #dc3545;
+}
+
+.modal
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.modal.active
+{
+    display: flex;
+}
+
+.modal-backdrop
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #000000;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.modal-backdrop.active
+{
+    opacity: 0.7;
+}
+
+@keyframes fadeInDownBig 
+{
+    from 
+    {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0);
+    }
+  
+    to 
+    {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fadeInDownBig 
+{
+    animation-name: fadeInDownBig;
+}
+
+@keyframes fadeOutDownBig 
+{
+    from 
+    {
+      opacity: 1;
+    }
+  
+    to 
+    {
+      opacity: 0;
+      transform: translate3d(0, 2000px, 0);
+    }
+}
+  
+.fadeOutDownBig 
+{
+    animation-name: fadeOutDownBig;
+}
+  
+
+.modal-dialog
+{
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.btn-modal-close
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #000000;
+    border: 1px solid #000000;
+    transition: 0.5s;
+}
+
+.btn-modal-close:after
+{
+    content: "";
+    height: 2px;   
+    width: 70%;
+    position: absolute;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-modal-close:before
+{
+    content: "";
+    height: 2px;   
+    width: 70%;
+    position: absolute;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-modal-close:hover
+{
+    background: #ffffff
+}
+
+.btn-modal-close:hover:after, .btn-modal-close:hover:before
+{
+    background-color: #000000;
 }
