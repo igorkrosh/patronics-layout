@@ -1053,3 +1053,8 @@ footer .salut a
 {
     display: none;
 }
+
+header .menu .btn-modal
+{
+    display: none;
+}
