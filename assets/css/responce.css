@@ -258,8 +258,159 @@
 
     .interface-text-wrapper
     {
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 
+    .panel-interface .interface-switcher.owl-carousel
+    {
+        display: block;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .btn-interface
+    {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .panel-interface
+    {
+        height: auto;
+    }
+
+    .interface-switcher-navs
+    {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .interface-switcher-container
+    {
+        position: relative;
+    }
     
+    .main-slider .slider-title
+    {
+        font-size: 22px;
+    }
+
+    .main-slider .slider-title b
+    {
+        font-size: 36px;
+    }
+
+    .main-slider p
+    {
+        font-size: 16px;
+    }
+
+    .main-slider .slider-item
+    {
+        min-height: 330px;
+        height: auto;
+    }
+
+    .main-slider p
+    {
+        margin-bottom: 25px;
+        width: 50%;
+    }
+
+    .main-slider .slider-wrapper .container
+    {
+        padding: 0 70px;
+    }
+
+    .refrigerator-package
+    {
+        background: none;
+    }
+
+    .package-item
+    {
+        position: initial;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .package-item .item-text
+    {
+        margin: auto;
+    }
+
+    .package-item img
+    {
+        margin:0 auto 25px auto;
+    }
+
+    .refrigerator-package
+    {
+        height: auto;
+    }
+
+    .our-pluses-sect .plus-text
+    {
+        font-size: 15px;
+    }
+
+    .our-pluses-sect .plus-icon
+    {
+        height: 50px;
+    }
+
+    .our-pluses-sect .plus-item
+    {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 540px)
+{
+    .container
+    {
+        width: 100%;
+    }
+
+    header .logo img
+    {
+        height: 30px;
+    }
+
+    .package-item .item-text
+    {
+        width: 100%;
+    }
+
+    .our-pluses-sect .pluses-wrapper
+    {
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .our-pluses-sect .plus-item
+    {
+        margin-top: 25px;
+    }
+
+    .contact-form-wrapper, .contact-form-wrapper .input-form, .search-form
+    {
+        width: 100%;
+    }
+
+    footer .footer-col:first-child
+    {
+        flex-direction: column;
+    }
+
+    header .contacts-wrapper .contact.mail
+    {
+        padding-left: 5px;
+    }
 }

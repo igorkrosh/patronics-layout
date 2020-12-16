@@ -31,8 +31,16 @@ function SetMainSlider()
 
 function SetInterfaceSection()
 {
-    $('.btn-interface').on('click', function() {
+    $('.btn-interface-wrapper .btn-interface').on('click', function() {
         SwitchIntefrace($(this).attr('interface'))
+    });
+
+    $('.interface-switcher').owlCarousel({
+        items: 1,
+        navContainer: '.interface-switcher-navs',
+        onTranslate: ModileInterfaceSwitcherOnTranslate,
+        loop: true,
+        navText: ['', ''],
     });
 }
 
@@ -90,6 +98,14 @@ function SwitchIntefrace(interfaceName)
 
         switchInterfaceBlock = !switchInterfaceBlock;
     }
+}
+
+function ModileInterfaceSwitcherOnTranslate(event)
+{
+    let target = $(event.target).find('.btn-interface')[event.item.index];
+    let interfaceCode = $(target).attr('interface');
+    SwitchIntefrace(interfaceCode)
+    console.log(target)
 
 }
 
