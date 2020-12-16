@@ -64,6 +64,11 @@
         top: 160px;
     }
 
+    .stand
+    {
+        left: 45%;
+    }
+
     .stand img
     {
         height: 200px;
@@ -91,4 +96,170 @@
     {
         max-width: 240px;
     }
+}
+
+@media(max-width: 992px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+
+    .btn-interface
+    {
+        font-size: 22px;
+    }
+
+    .interface .panel
+    {
+        width: 300px;
+    }
+
+    .interface [interface]
+    {
+        left: 96px;
+        top: 60px;
+        width: 102px;
+    }
+
+    .interface:after
+    {
+        left: 96px;
+        top: 60px;
+    }
+
+    .panel-interface
+    {
+        height: 550px;
+    }
+
+    .search-form
+    {
+        width: 400px;
+    }
+
+    .btn-menu
+    {
+        display: block;
+    }
+
+    .menu
+    {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        padding-top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .menu.active
+    {
+        left: 0;
+    }
+
+    .menu ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu ul li
+    {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .menu ul li a 
+    {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .main-slider .slider-item
+    {
+        height: 400px;
+    }
+
+    .refrigerator-package
+    {
+        height: 1080px;
+    }
+
+    .remote-controller
+    {
+        top: 185px;
+    }
+
+    .stand
+    {
+        flex-direction: column;
+    }
+
+    .stand img
+    {
+        margin-left: auto;
+        margin-bottom: 25px;
+    }
+
+    .contact-us .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form-wrapper
+    {
+        margin-top: 50px;
+    }
+
+    footer .container
+    {
+        flex-direction: column;
+    }
+
+    footer .footer-col:first-child
+    {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .info, footer .copyright
+    {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 768px)
+{
+    .container
+    {
+        max-width: 540px;
+    }
+
+    .btn-interface-wrapper
+    {
+        display: none;
+    }
+
+    .interface-viewer.container
+    {
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .interface-text-wrapper
+    {
+        margin-bottom: 25px;
+    }
+
+    
 }

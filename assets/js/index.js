@@ -13,6 +13,7 @@ function Core()
     SetInterfaceSection();
     SetForms();
     SetModal();
+    SetMobileMenu();
 }
 
 function SetMainSlider()
@@ -217,4 +218,21 @@ function HideModal(modalId)
         $(modalId + ' .modal-dialog').removeClass('fadeOutDownBig');
         $('.modal-backdrop').remove();
     });
+}
+
+function SetMobileMenu()
+{
+    $('.btn-menu').on('click', function() {
+        if ($('header .menu').hasClass('active'))
+        {
+            $('header .menu').removeClass('active');
+            $(this).removeClass('active');
+        }
+        else
+        {
+            $('header .menu').addClass('active');
+            $(this).addClass('active');
+        }
+        
+    })
 }
