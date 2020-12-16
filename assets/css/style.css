@@ -181,6 +181,7 @@ section:last-of-type
 {
     border: none;
     background-color: #000000;
+    border: 1px solid #000000;
     color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
@@ -192,7 +193,8 @@ section:last-of-type
 
 .btn-black:hover
 {
-    transform: scale(1.1);
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .main-slider
