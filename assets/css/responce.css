@@ -376,14 +376,24 @@
         width: 100%;
     }
 
-    header .logo img
-    {
-        height: 30px;
-    }
-
     .package-item .item-text
     {
         width: 100%;
+    }
+
+    .navbar
+    {
+        height: 70px;
+    }
+
+    body
+    {
+        padding-top: 70px;
+    }
+
+    header .logo
+    {
+        margin-right: auto;
     }
 
     .our-pluses-sect .pluses-wrapper
@@ -412,5 +422,98 @@
     header .contacts-wrapper .contact.mail
     {
         padding-left: 5px;
+    }
+
+    header .menu .contacts-wrapper
+    {
+        display: flex;
+    }
+
+    header .contacts-wrapper
+    {
+        display: none;
+    }
+
+    .menu
+    {
+        flex-direction: column;
+    }
+
+    header .btn-modal
+    {
+        display: none;
+    }
+
+    header .menu .btn-modal
+    {
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    .main-slider .slider-title b
+    {
+        font-size: 33px;
+    }
+
+    .main-slider .slider-title
+    {
+        font-size: 18px;
+    }
+
+    .main-slider p
+    {
+        width: 100%;
+    }
+
+    .nav-dots-wrapper
+    {
+        bottom: 20px;
+    }
+
+    .interface-text
+    {
+        font-size: 16px;
+    }
+
+    .panel-interface .title
+    {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .interface-switcher-navs
+    {
+        top: 30%;
+    }
+
+    .modal-dialog
+    {
+        max-width: 290px;
+    }
+
+    .modal-dialog .title
+    {
+        margin-top: 20px;
+    }
+
+    .title
+    {
+        font-size: 25px;
+    }
+
+    .contact-form-wrapper .subtitle
+    {
+        margin-bottom: 20px;
+    }
+
+    .contact-form-wrapper
+    {
+        padding: 25px;
+    }
+
+    .contact-form-wrapper b
+    {
+        margin-top: 15px;
+        margin-bottom: 5px;
     }
 }

@@ -1046,3 +1046,8 @@ footer .salut a
 {
     display: none;
 }
+
+.menu .contacts-wrapper
+{
+    display: none;
+}
