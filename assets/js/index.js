@@ -46,7 +46,15 @@ function SetInterfaceSection()
 
 function SetWhiteLinePosition(interfaceName)
 {
-    let btn = $(`button[interface="${interfaceName}"]`)[0]
+    let btn = $(`button[interface="${interfaceName}"]`);
+
+    if (btn.length === 0)
+    {
+        return;
+    }
+
+    btn = btn[0];
+
     let lineWidth = $(btn).outerWidth() * 0.8;
     let left = btn.offsetLeft + ($(btn).outerWidth() - lineWidth) / 2
 
