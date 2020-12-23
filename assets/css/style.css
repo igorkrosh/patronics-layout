@@ -1058,3 +1058,79 @@ header .menu .btn-modal
 {
     display: none;
 }
+
+.section-title
+{
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.section-title .container
+{
+    padding: 0 100px;
+}
+
+.section-title .title
+{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.section-title p
+{
+    font-size: 18px;
+    font-weight: 400;
+    color: #434343;
+}
+
+.row
+{
+    display: flex;
+}
+
+.ymap
+{
+    width: 800px;
+    height: 450px;
+}
+
+.sect-contact-us .text-wrapper
+{
+    padding-left: 70px;
+}
+
+.title.left
+{
+    text-align: left;
+}
+
+.col.text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p.text-gray
+{
+    color: #808080;
+}
+
+.col.text p
+{
+    line-height: 30px;
+}
+
+.sect-contact-us .row
+{
+    margin-top: 50px;
+}
