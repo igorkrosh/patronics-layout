@@ -14,6 +14,8 @@ function Core()
     SetForms();
     SetModal();
     SetMobileMenu();
+    SetSelectSwitcher();
+    SetArchive();
 }
 
 function SetMainSlider()
@@ -259,4 +261,48 @@ function SetMobileMenu()
         }
         
     })
+}
+
+function SetSelectSwitcher()
+{
+    $('.select-switcher').change(function() {
+        let target = $(this).val();
+
+        SwitchCard(target);
+    })
+}
+
+function SwitchCard(target)
+{
+    $('.card.active').animate({
+        opacity: 0
+    }, 500, function() {
+        $('.card.active').removeClass('active');
+
+        $(`[card-name="${target}"]`).css('opacity', 0);
+        $(`[card-name="${target}"]`).addClass('active');
+        $(`[card-name="${target}"]`).animate({
+            opacity: 1
+        }, 500)
+    })
+}
+
+function SetArchive()
+{
+    $('.update .update-show').on('click', function() {
+        let updateDiv = $(this).closest('.update');
+
+        if ($(updateDiv).hasClass('active'))
+        {
+            $(this).text('Подробнее');
+            $(updateDiv).find('.text-full').css('max-height', '0px');
+            $(updateDiv).removeClass('active')
+        }
+        else
+        {
+            $(this).text('Скрыть');
+            $(updateDiv).find('.text-full').css('max-height', `${$(updateDiv).find('.text-wrapper').height()}px`);
+            $(updateDiv).addClass('active')
+        }
+    });
 }

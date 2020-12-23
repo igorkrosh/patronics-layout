@@ -594,4 +594,25 @@
     {
         padding: 0 15px;
     }
+
+    .select-switcher-form
+    {
+        flex-direction: column;
+    }
+
+    .select-switcher-form label
+    {
+        margin-bottom: 15px;
+    }
+
+    .update-title
+    {
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .update-title .link-download
+    {
+        margin-left: 0;
+    }
 }
